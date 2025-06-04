@@ -321,6 +321,16 @@ text-align: center;
   display: flex;
 }
 
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 0.8rem;
+}
+
 .arrow{
   position: absolute;
   right: -5rem;
@@ -372,6 +382,9 @@ text-align: center;
   justify-content: center;
   flex-direction: column;
   height: 60%; /*neu*/
+}
+.experience-logo{
+  height: 1.6rem;
 }
 
 .article-container{
