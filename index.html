@@ -8,7 +8,12 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mediaqueries.css">
 
-  ´
+  <!-- Linking SwiperJS CSS -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -200,57 +205,67 @@
          onclick="location.href='./#projects'">
   </section>
   <section id ="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./img/project.png" alt="Project 1" class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Project One</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              GitHub
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
 
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./img/project.png" alt="Project 2" class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Project Two</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              GitHub
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
+    <div class="section__text">
+      <p class="section__text__p1">Browse My</p>
+      <h1 class="title">Recent Work</h1>
+    </div>
 
-          </div>
-        </div>
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./img/project.png" alt="Project 3" class="project-img">
-          </div>
-          <h2 class="experience-sub-title project-title">Project Three</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              GitHub
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
+    <div class="container swiper">
+      <div class="card-wrapper">
+        <ul class="card-list swiper-wrapper">
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="./img/project.png" alt="Card Image" class="card-image">
+              <p class="badge developer">Developer</p>
+              <h2 class="card-title">Lorem ispum Lorem ispum Lorem ispum</h2>
+              <button type="button" class="card-button"><img src="./logo/right-arrow.png" alt="Right Arrow Button"></button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="./img/project.png" alt="Card Image" class="card-image">
+              <p class="badge designer">Designer</p>
+              <h2 class="card-title">Lorem ispum Lorem ispum Lorem ispum</h2>
+              <button type="button" class="card-button"><img src="./logo/right-arrow.png" alt="Right Arrow Button"></button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="./img/project.png" alt="Card Image" class="card-image">
+              <p class="badge marketer">Marketer</p>
+              <h2 class="card-title">Lorem ispum Lorem ispum Lorem ispum</h2>
+              <button type="button" class="card-button"><img src="./logo/right-arrow.png" alt="Right Arrow Button"></button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="./img/project.png" alt="Card Image" class="card-image">
+              <p class="badge gamer">Gamer</p>
+              <h2 class="card-title">Lorem ispum Lorem ispum Lorem ispum</h2>
+              <button type="button" class="card-button"><img src="./logo/right-arrow.png" alt="Right Arrow Button"></button>
+            </a>
+          </li>
+          <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+              <img src="./img/project.png" alt="Card Image" class="card-image">
+              <p class="badge">Editor</p>
+              <h2 class="card-title">Lorem ispum Lorem ispum Lorem ispum</h2>
+              <button type="button" class="card-button"><img src="./logo/right-arrow.png" alt="Right Arrow Button"></button>
+            </a>
+          </li>
+        </ul>
+        <!-- Swiper Pagination -->
+        <div class="swiper-pagination"></div>
 
-          </div>
-        </div>
+        <!-- Swiper Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+
       </div>
     </div>
+
     <img src="logo/arrow.png" alt="Arrow icon" class="icon arrow"
          onclick="location.href='./#contact'">
   </section>
@@ -283,5 +298,9 @@
   </footer>
   <script src="js/app.js"></script>
 
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
