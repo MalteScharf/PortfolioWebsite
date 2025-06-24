@@ -564,25 +564,38 @@ article .icon{
   gap: 0.5rem;      /* optional: space between badges */
 }
 
-.card-list .card-link .badge.python{
-  color: #B22485;
-  background: #F7DFF5;
+/* ----------  PYTHON-ÖKOSYSTEM  ---------- */
+.card-list .card-link .badge.python {
+  color: #fff;
+  background: #3776AB;
 }
 
-.card-list .card-link .badge.sklearn{
-  color: #B25A2B;
-  background: #F7DFF5;
+.card-list .card-link .badge.sklearn {
+  color: #fff;
+  background: #4F87C2;
 }
 
-.card-list .card-link .badge.marketer{
-  color: #B25A2B;
-  background: #ffe3d2;
+/* ----------  JAVASCRIPT-ÖKOSYSTEM  ---------- */
+.card-list .card-link .badge.javascript {
+  color: #1e1e1e;
+  background: #f0db84; /* Dezenteres, abgetöntes JS-Gelb */
 }
 
-.card-list .card-link .badge.gamer{
-  color: #205C20;
-  background: #d6f8d6;
+.card-list .card-link .badge.phaserjs {
+  color: #1e1e1e;
+  background: #f7eec3; /* Heller Gelbton, deutlich zurückhaltender */
 }
+
+.card-list .card-link .badge.html {
+  color: #fff;
+  background: #f28c5a;   /* Sanfteres HTML-Orange */
+}
+
+.card-list .card-link .badge.css {
+  color: #fff;
+  background: #6da8f7;   /* Sanfteres CSS-Blau */
+}
+
 
 .card-list .card-link .badge.editor{
   color: #856404;
