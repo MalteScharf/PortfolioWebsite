@@ -1,4 +1,4 @@
-new Swiper('.card-wrapper', {
+const instance_swiper = new Swiper('.card-wrapper', {
   // Optional parameters
   loop: true,
   spaceBetween: 30,
@@ -29,5 +29,34 @@ new Swiper('.card-wrapper', {
       slidesPerView: 3
     }
 
-  }
+  },
+
+  on: {
+    slideChange: function () {
+      const index_currentSlide      = this.realIndex;
+      const currentSlide            = this.slides[index_currentSlide];
+
+      // make "previous" button invisible when current slide has slideindex of 0
+      if (index_currentSlide === 0){
+        document.getElementsByClassName('swiper-button-prev')[0].style.visibility ='hidden';
+      } else{
+        document.getElementsByClassName('swiper-button-prev')[0].style.visibility ='visible';
+      }
+
+      // make "next" button invisible when current slide has index of last slide
+
+      const numberOfSlides = document.getElementsByClassName('card-item').length;
+      console.log('Number of Slides:', numberOfSlides);
+      console.log('Current Slide:', index_currentSlide);
+
+      if (index_currentSlide === numberOfSlides-1){
+        document.getElementsByClassName('swiper-button-next')[0].style.visibility ='hidden';
+      } else{
+        document.getElementsByClassName('swiper-button-next')[0].style.visibility ='visible';
+      }
+
+    },
+  },
+
 });
+
