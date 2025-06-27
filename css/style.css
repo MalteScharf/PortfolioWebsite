@@ -465,8 +465,12 @@ article .icon{
   border: 2px solid transparent;
   box-shadow: 0 10px 10px rgba(0,0,0,0.05);
   transition: 0.2s ease;
+  height: 400px;
 }
 
+.card-link{
+  position: relative;
+}
 
 .card-list .card-item .card-link:hover {
   border-color: #5372F0;
@@ -528,8 +532,10 @@ article .icon{
 }
 
 .card-button {
+  position: absolute;
   border: none;
   padding: 0;
+  bottom: 10px;
 }
 
 .card-wrapper .swiper-pagination-bullet{
