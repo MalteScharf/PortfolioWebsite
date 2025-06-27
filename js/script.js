@@ -46,8 +46,6 @@ const instance_swiper = new Swiper('.card-wrapper', {
       // make "next" button invisible when current slide has index of last slide
 
       const numberOfSlides = document.getElementsByClassName('card-item').length;
-      console.log('Number of Slides:', numberOfSlides);
-      console.log('Current Slide:', index_currentSlide);
 
       if (index_currentSlide === numberOfSlides-1){
         document.getElementsByClassName('swiper-button-next')[0].style.visibility ='hidden';
@@ -58,5 +56,25 @@ const instance_swiper = new Swiper('.card-wrapper', {
     },
   },
 
+});
+
+// Card Preview Video
+document.querySelectorAll('.swiper-slide .card-link').forEach(card => {
+    const img = card.querySelector('.card-image')
+    const video = card.querySelector('.preview-video')
+    //const cardContainer = document.querySelector('.card-link');
+    card.addEventListener('mouseenter', () => {
+      console.log("Mouse enter Card: ", card)
+      img.style.display='none';
+      video.style.display='block';
+      video.play();
+
+    });
+
+    card.addEventListener('mouseleave', () => {
+      console.log("Mouse leaves Card: ", card)
+      img.style.display='block';
+      video.style.display='none';
+    });
 });
 
