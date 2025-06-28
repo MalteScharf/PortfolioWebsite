@@ -500,9 +500,9 @@ article .icon{
   background-color: rgb(1,20,30);
 }
 
-.card-list .card-item .preview-video video{
-  overflow: hidden;
+.card-list .card-item .preview-video{
   display: none;
+  overflow: hidden;
 }
 
 .card-list .card-link .badge{

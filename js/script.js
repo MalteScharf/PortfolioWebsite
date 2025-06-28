@@ -75,6 +75,7 @@ document.querySelectorAll('.swiper-slide .card-link').forEach(card => {
       console.log("Mouse leaves Card: ", card)
       img.style.display='block';
       video.style.display='none';
+      video.currentTime = 0;
     });
 });
 
