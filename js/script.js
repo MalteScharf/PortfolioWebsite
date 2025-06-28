@@ -59,7 +59,12 @@ const instance_swiper = new Swiper('.card-wrapper', {
 });
 
 // Card Preview Video
-document.querySelectorAll('.swiper-slide .card-link').forEach(card => {
+document.querySelectorAll('.card-item').forEach(item => {
+  const video = item.querySelector('video');
+  const card = item.querySelector('.card-link')
+
+  if (video && card) {
+    console.log(card.classList)
     const img = card.querySelector('.card-image')
     const video = card.querySelector('.preview-video')
     //const cardContainer = document.querySelector('.card-link');
@@ -77,6 +82,7 @@ document.querySelectorAll('.swiper-slide .card-link').forEach(card => {
       video.style.display='none';
       video.currentTime = 0;
     });
+ }
 });
 
 // Email activation
