@@ -471,7 +471,7 @@ article .icon{
 .card-list .card-item .card-link{
   user-select: none;
   display: block;
-  background: #fff;
+  background: #ffffff;
   padding: 18px;
   border-radius: 12px;
   text-decoration: none;
@@ -487,6 +487,8 @@ article .icon{
 
 .card-list .card-item .card-link:hover {
   border-color: #5372F0;
+  transform: translateY(-4px);
+
 }
 
 .card-list .card-item .card-link:active{
@@ -544,7 +546,7 @@ article .icon{
   margin: 30px 0 5px ;
   background: none;
   cursor: pointer;
-  border: 2px solid #5372F0;
+  border: 2px solid #575a65;
   /* transform: rotate(-45deg);   */  /* rotiert das Logo */
   transition: 0.4s ease;
   position: absolute;
@@ -555,6 +557,7 @@ article .icon{
 .card-list .card-link:hover .card-button{
   color: #ffffff;
   background: rgba(83, 114, 240, 0.29);
+  border: 2px solid #5372F0;
 }
 
 .card-button img {
@@ -606,6 +609,11 @@ article .icon{
 .card-list .card-link .badge.zeroMQ {
   color: #fff;
   background: #4F87C2;
+}
+
+.card-list .card-link .badge.openCV {
+  color: #fff;
+  background: #5C3EE8;
 }
 
 /* ----------  JAVASCRIPT-ÖKOSYSTEM  ---------- */
