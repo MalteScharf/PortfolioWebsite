@@ -60,7 +60,7 @@ a:hover{
   -webkit-text-decoration-line: underline;
   text-decoration-color: rgb(181, 181,181);
   -webkit-text-decoration-color: rgb(181, 181,181);
-    text-underline-offset: 1rem;
+  text-underline-offset: 1rem;
 }
 
 .logo{
@@ -223,7 +223,7 @@ section.visible {
 }
 
 .section__text__p1{
-text-align: center;
+  text-align: center;
 }
 
 .section__text__p2{
@@ -418,8 +418,6 @@ article .icon{
 
 }
 
-
-
 .container.swiper {
   height: 75vh;
 }
@@ -480,8 +478,12 @@ article .icon{
   border: 2px solid transparent;
   box-shadow: 0 10px 10px rgba(0,0,0,0.05);
   transition: 0.2s ease;
+  height: 400px;
 }
 
+.card-link{
+  position: relative;
+}
 
 .card-list .card-item .card-link:hover {
   border-color: #5372F0;
@@ -497,9 +499,23 @@ article .icon{
 
 .card-list .card-item .card-image{
   width: 100%;
+  height: 180px;      /* /TODO: Kleiner? */
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 10px;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none; /* prevents hover issues */
+
+}
+
+.card-list .card-item .airtimeRushLogo{
+  object-fit: contain;
+  background-color: rgb(1,20,30);
+}
+
+.card-list .card-item .preview-video{
+  display: none;
+  overflow: hidden;
 }
 
 .card-list .card-link .badge{
@@ -519,6 +535,7 @@ article .icon{
   font-weight: 600;
 }
 
+
 .card-list .card-link .card-button {
   height: 35px;
   width: 35px;
@@ -528,13 +545,16 @@ article .icon{
   background: none;
   cursor: pointer;
   border: 2px solid #5372F0;
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg);   */  /* rotiert das Logo */
   transition: 0.4s ease;
+  position: absolute;
+  padding: 0;
+  bottom: 10px;
 }
 
 .card-list .card-link:hover .card-button{
   color: #ffffff;
-  background: #5372F0;
+  background: rgba(83, 114, 240, 0.29);
 }
 
 .card-button img {
@@ -542,10 +562,6 @@ article .icon{
   height: auto;
 }
 
-.card-button {
-  border: none;
-  padding: 0;
-}
 
 .card-wrapper .swiper-pagination-bullet{
   height: 13px;
@@ -573,26 +589,46 @@ article .icon{
 }
 
 /* Badges */
-
-.card-list .card-link .badge.designer{
-  color: #B22485;
-  background: #F7DFF5;
+.badge-container {
+  display: flex;
+  flex-wrap: wrap; /* optional: wraps badges if too many */
+  gap: 0.5rem;      /* optional: space between badges */
 }
 
-.card-list .card-link .badge.developer{
-  color: #B25A2B;
-  background: #F7DFF5;
+/* ----------  PYTHON-ÖKOSYSTEM  ---------- */
+
+.card-list .card-link .badge.python {
+  color: #fff;
+  background: #3776AB;
 }
 
-.card-list .card-link .badge.marketer{
-  color: #B25A2B;
-  background: #ffe3d2;
+.card-list .card-link .badge.sklearn,
+.card-list .card-link .badge.zeroMQ {
+  color: #fff;
+  background: #4F87C2;
 }
 
-.card-list .card-link .badge.gamer{
-  color: #205C20;
-  background: #d6f8d6;
+/* ----------  JAVASCRIPT-ÖKOSYSTEM  ---------- */
+.card-list .card-link .badge.javascript {
+  color: #1e1e1e;
+  background: #f0db84; /* Dezenteres, abgetöntes JS-Gelb */
 }
+
+.card-list .card-link .badge.phaserjs {
+  color: #1e1e1e;
+  background: #f7eec3; /* Heller Gelbton, deutlich zurückhaltender */
+}
+
+.card-list .card-link .badge.html {
+  color: #fff;
+  background: #f28c5a;   /* Sanfteres HTML-Orange */
+}
+
+.card-list .card-link .badge.css {
+  color: #fff;
+  background: #6da8f7;   /* Sanfteres CSS-Blau */
+}
+
 
 .card-list .card-link .badge.editor{
   color: #856404;
