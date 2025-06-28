@@ -79,3 +79,19 @@ document.querySelectorAll('.swiper-slide .card-link').forEach(card => {
     });
 });
 
+// Email activation
+
+const encodedpart1 = "bWFsdGUuc";
+const encodedpart2 = "2NoYXJmQGhvd";
+const encodedpart3 = "G1haWwuZGU=";
+
+
+function activateEmail(){
+  const decoded = atob(encodedpart1 + encodedpart2 + encodedpart3);
+  const link = document.getElementById("emailLink");
+  link.href = `mailto:${decoded}?subject=Hey Malte, i am interested in working together!`;
+  link.removeEventListener("click", activateEmail);
+}
+// add Event Listener only when clicked on
+document.getElementById("emailLink").addEventListener("click", activateEmail);
+
