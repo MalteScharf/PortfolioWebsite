@@ -101,3 +101,25 @@ function activateEmail(){
 // add Event Listener only when clicked on
 document.getElementById("emailLink").addEventListener("click", activateEmail);
 
+// Tech Stack Animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const targetWidth = bar.getAttribute('data-width');
+        bar.style.width = targetWidth;
+        obs.unobserve(bar); // animate only once
+      }
+    });
+  }, {
+    threshold: 0.5,
+  });
+
+  document.querySelectorAll('.exp-fill').forEach(bar => {
+    bar.style.width = '0'; // start from 0
+    observer.observe(bar);
+  });
+});
+

@@ -168,6 +168,7 @@ section{
 
 .section-container{
   display: flex;
+
 }
 
 /* TEST */
@@ -234,6 +235,7 @@ section.visible {
 .title{
   font-size: 3rem;
   text-align: center;
+
 }
 
 #socials-container{
@@ -369,7 +371,17 @@ section.visible {
 
 #experience{
   position: relative;
+  padding: 4rem 1rem;
+
+
+
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 
 .experience-sub-title{
   color: rgb(85,85,85);
@@ -381,7 +393,9 @@ section.visible {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 60%; /*neu*/
+  height: 100%; /*neu*/
+  width: 100%;
+
 }
 .experience-logo{
   height: 1.6rem;
@@ -405,6 +419,105 @@ article{
 
 article .icon{
   cursor: default;
+}
+
+.skill-groups-wrapper {
+  display: flex;
+  flex-direction: column;  /* Stack children vertically */
+  flex-wrap: wrap;        /* Allow multiple rows if needed */
+  justify-content: center;
+  gap: 0rem;              /* Space between groups */
+  width: 100%;
+}
+
+.skill-group-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;      /* space below title */
+  text-align: center;
+  padding: 0;
+
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start; /* ensures top alignment */
+  align-items: stretch;        /* make children use full width */
+  gap: 0;
+}
+
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Up to 4 per row */
+  gap: 1.5rem;
+  text-align: center;
+  padding-top: 0;   /* reduce vertical spacing */
+  margin-top: 0;    /* ensure no extra space */
+
+
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+  min-width: 0; /* allow shrinking */
+
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-weight: 600;
+  margin: 0;
+}
+
+.skill-desc {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0;
+}
+
+.exp-bar {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.exp-fill {
+  height: 100%;
+  background: #5372F0;
+  border-radius: 3px;
+  transition: width 0.8s ease;
+  width: 0; /* initial width */
+}
+
+.skill-group-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333;
 }
 
 /* PROJECTS SECTION */
@@ -694,3 +807,4 @@ footer{
   margin: 0 1rem;
   text-align: center;
 }
+
