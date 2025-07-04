@@ -95,9 +95,31 @@ const encodedpart3 = "G1haWwuZGU=";
 function activateEmail(){
   const decoded = atob(encodedpart1 + encodedpart2 + encodedpart3);
   const link = document.getElementById("emailLink");
-  link.href = `mailto:${decoded}?subject=Hey Malte, i am interested in working together!`;
+  link.href = `mailto:${decoded}?subject=Hey Malte, I am interested in working together!`;
   link.removeEventListener("click", activateEmail);
 }
 // add Event Listener only when clicked on
 document.getElementById("emailLink").addEventListener("click", activateEmail);
+
+// Tech Stack Animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const targetWidth = bar.getAttribute('data-width');
+        bar.style.width = targetWidth;
+        obs.unobserve(bar); // animate only once
+      }
+    });
+  }, {
+    threshold: 0.5,
+  });
+
+  document.querySelectorAll('.exp-fill').forEach(bar => {
+    bar.style.width = '0'; // start from 0
+    observer.observe(bar);
+  });
+});
 

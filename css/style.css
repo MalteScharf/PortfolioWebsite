@@ -154,7 +154,7 @@ a:hover{
 /* SECTIONS */
 
 section{
-  padding-top: 4vh;
+  padding-top: 0;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -168,18 +168,21 @@ section{
 
 .section-container{
   display: flex;
+  width: 100%;
+
 }
 
 /* TEST */
 
-section {
+.section {
+  padding-top: 0;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Class to trigger animation */
-section.visible {
+.section.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -223,7 +226,10 @@ section.visible {
 }
 
 .section__text__p1{
+  padding: 0;
+  margin-top: 2rem;
   text-align: center;
+  font-weight: 300;
 }
 
 .section__text__p2{
@@ -234,6 +240,7 @@ section.visible {
 .title{
   font-size: 3rem;
   text-align: center;
+
 }
 
 #socials-container{
@@ -369,7 +376,17 @@ section.visible {
 
 #experience{
   position: relative;
+  /*padding: 4rem 1rem;*/
+
+
+
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 
 .experience-sub-title{
   color: rgb(85,85,85);
@@ -381,7 +398,9 @@ section.visible {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 60%; /*neu*/
+  height: 100%; /*neu*/
+  width: 100%;
+
 }
 .experience-logo{
   height: 1.6rem;
@@ -405,6 +424,113 @@ article{
 
 article .icon{
   cursor: default;
+}
+
+.skill-groups-wrapper {
+  display: flex;
+  flex-direction: column;  /* Stack children vertically */
+  flex-wrap: wrap;        /* Allow multiple rows if needed */
+  justify-content: center;
+  gap: 0rem;              /* Space between groups */
+  width: 100%;
+}
+
+.skill-group-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 3rem;      /* space below title */
+  margin-bottom: 2rem;      /* space below title */
+  text-align: center;
+  padding: 0;
+
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start; /* ensures top alignment */
+  align-items: stretch;        /* make children use full width */
+  gap: 0;
+}
+
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  text-align: center;
+  padding-top: 0rem;
+  margin-top: 0rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+  min-width: 0; /* allow shrinking */
+
+}
+
+.empty-skillitem{
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.skill-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.skill-desc {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0;
+}
+
+.exp-bar {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.exp-fill {
+  height: 100%;
+  background: #5372F0;
+  border-radius: 3px;
+  transition: width 0.8s ease;
+  width: 0; /* initial width */
+}
+
+.skill-group-title {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
 }
 
 /* PROJECTS SECTION */
@@ -694,3 +820,4 @@ footer{
   margin: 0 1rem;
   text-align: center;
 }
+
