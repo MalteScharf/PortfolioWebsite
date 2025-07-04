@@ -95,7 +95,7 @@ const encodedpart3 = "G1haWwuZGU=";
 function activateEmail(){
   const decoded = atob(encodedpart1 + encodedpart2 + encodedpart3);
   const link = document.getElementById("emailLink");
-  link.href = `mailto:${decoded}?subject=Hey Malte, i am interested in working together!`;
+  link.href = `mailto:${decoded}?subject=Hey Malte, I am interested in working together!`;
   link.removeEventListener("click", activateEmail);
 }
 // add Event Listener only when clicked on

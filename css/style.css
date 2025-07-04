@@ -154,7 +154,7 @@ a:hover{
 /* SECTIONS */
 
 section{
-  padding-top: 4vh;
+  padding-top: 0;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -168,19 +168,21 @@ section{
 
 .section-container{
   display: flex;
+  width: 100%;
 
 }
 
 /* TEST */
 
-section {
+.section {
+  padding-top: 0;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Class to trigger animation */
-section.visible {
+.section.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -224,7 +226,10 @@ section.visible {
 }
 
 .section__text__p1{
+  padding: 0;
+  margin-top: 2rem;
   text-align: center;
+  font-weight: 300;
 }
 
 .section__text__p2{
@@ -371,7 +376,7 @@ section.visible {
 
 #experience{
   position: relative;
-  padding: 4rem 1rem;
+  /*padding: 4rem 1rem;*/
 
 
 
@@ -433,7 +438,8 @@ article .icon{
 .skill-group-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 0;      /* space below title */
+  margin-top: 3rem;      /* space below title */
+  margin-bottom: 2rem;      /* space below title */
   text-align: center;
   padding: 0;
 
@@ -451,22 +457,21 @@ article .icon{
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Up to 4 per row */
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
   text-align: center;
-  padding-top: 0;   /* reduce vertical spacing */
-  margin-top: 0;    /* ensure no extra space */
-
-
-}
+  padding-top: 0rem;
+  margin-top: 0rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 0.75rem;
+  border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease;
@@ -474,8 +479,15 @@ article .icon{
 
 }
 
+.empty-skillitem{
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .skill-item:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+
 }
 
 .skill-item img {
@@ -486,6 +498,7 @@ article .icon{
 
 .skill-name {
   font-weight: 600;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -497,7 +510,7 @@ article .icon{
 
 .exp-bar {
   width: 100%;
-  height: 6px;
+  height: 4px;
   background: #e0e0e0;
   border-radius: 3px;
   margin-top: 6px;
@@ -514,8 +527,8 @@ article .icon{
 
 .skill-group-title {
   font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
   color: #333;
 }
