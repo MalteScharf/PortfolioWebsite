@@ -87,9 +87,9 @@ document.querySelectorAll('.card-item').forEach(item => {
 
 // Email activation
 
-const encodedpart1 = "bWFsdGUuc";
-const encodedpart2 = "2NoYXJmQGhvd";
-const encodedpart3 = "G1haWwuZGU=";
+const encodedpart1 = "Y29udGFjdEBt";
+const encodedpart2 = "YWx0ZXNjaGFy";
+const encodedpart3 = "Zi5jb20=";
 
 
 function activateEmail(){
