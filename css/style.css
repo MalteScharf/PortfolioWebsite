@@ -11,15 +11,25 @@ body{
 }
 
 html, body {
-  height: 100%;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /*height: 100%; */
+  /* scroll-behavior: smooth; */
+  /* overflow-y: scroll; */
 }
 
 p {
   color: rgb(85,85,85);
 }
+
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+
 
 
 /* Transition */
@@ -174,7 +184,7 @@ section{
 
 /* TEST */
 
-.section {
+section {
   padding-top: 0;
   opacity: 0;
   transform: translateY(20px);
@@ -182,7 +192,7 @@ section{
 }
 
 /* Class to trigger animation */
-.section.visible {
+section.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -822,3 +832,25 @@ footer{
   text-align: center;
 }
 
+
+/* GPT Test */
+
+.about-timeline {
+  margin-top: 2rem;
+  border-left: 3px solid #5372F0;
+  padding-left: 1rem;
+}
+
+.timeline-item {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "•";
+  position: absolute;
+  left: -1.2rem;
+  top: 0;
+  font-size: 1.5rem;
+  color: #5372F0;
+}
