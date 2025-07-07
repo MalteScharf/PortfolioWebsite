@@ -14,6 +14,7 @@ module.exports = merge(common, {
         { from: 'img', to: 'img' },
         { from: 'css', to: 'css' },
         { from: 'js/script.js', to: 'js/script.js' },
+        { from: 'js/vercelTracking.js', to: 'js/vercelTracking.js' },
         { from: 'js/vendor', to: 'js/vendor' },
         { from: 'icon.svg', to: 'icon.svg' },
         { from: 'favicon.ico', to: 'favicon.ico' },

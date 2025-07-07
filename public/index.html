@@ -64,7 +64,9 @@
       <p class="section__text__p2">Software Engineer in Education</p>
       <div class="btn-container">
         <!-- <button class="btn btn-color-2" onclick="window.open('./img/CV_webversion.pdf')">Download CV</button> -->
-        <button class="btn btn-color-2" onclick="trackCV()">Download CV</button>
+        <a href="./img/CV_webversion.pdf" onclick="trackCV()" target="_blank" rel="noopener noreferrer">
+          <button class="btn btn-color-2">Download CV</button>
+        </a>
         <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
       </div>
       <div id="socials-container">
@@ -326,8 +328,10 @@
 
   <!-- Vercel Analytics -->
   <script defer src="https://vercel.com/analytics/script.js"></script>
+  <script type="module" src="js/vercelTracking.js"></script>
 
-  <script type="module" src="js/script.js"></script>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
