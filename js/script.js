@@ -123,3 +123,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Track Vercel Analytics
+// Download CV
+import { track } from 'https://esm.sh/@vercel/analytics';
+window.trackCV = () => {
+  track('download_cv_clicked');
+  window.open('./img/CV_webversion.pdf');
+}
+
