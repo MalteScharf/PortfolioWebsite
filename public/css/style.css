@@ -649,12 +649,23 @@ article .icon{
 }
 
 .card-list .card-item .airtimeRushLogo{
-  object-fit: contain;
   background-color: rgb(1,20,30);
 }
 
 .card-list .card-item .MLLogo{
   background-color: rgb(223,233,246);
+}
+
+.card-list .card-item .PomodoroTomatoLogo{
+  background-color: rgb(232,180,173);
+}
+
+.card-list .card-item .DSLogo{
+  background-color: rgb(223, 234, 246);
+}
+
+.card-list .card-item .BaumyLogo{
+  background-color: rgb(178, 198, 176);
 }
 
 .card-list .card-item .preview-video{
