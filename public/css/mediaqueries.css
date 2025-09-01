@@ -29,6 +29,24 @@
     display: block;
   }
 
+  #profile {
+    height: auto;            /* don't squeeze the section */
+    padding: 24px 0;
+  }
+
+  #profile .section__pic-container {
+    width: clamp(220px, 65vw, 360px);  /* good mobile size */
+    height: auto;                      /* override the 46vw height */
+    margin: 0 auto 12px;
+  }
+
+  #profile .section__pic-container img {
+    display: block;
+    width: 100%;
+    height: auto;            /* keep aspect ratio */
+  }
+
+
   .arrow{
     display: none;
   }
@@ -74,6 +92,42 @@
   .about-containers, .contact-info-upper-container, .btn-container{
     flex-wrap: wrap;
   }
+  #about .section-container{
+    flex-direction: column;    /* stack instead of row */
+    align-items: center;       /* center both pic and text */
+    text-align: center;        /* optional: center the text */
+    display: flex;
+    margin: 0;
+    gap: 5px;
+  }
+  #about .section__pic-container {
+    width: clamp(220px, 70vw, 420px);
+    margin-top: 20px;   /* only a small bottom margin */
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 5 /6;    /* slightly shorter than portrait -> trims top/bottom */
+    overflow: hidden;       /* hide the cropped parts */
+
+
+  }
+  #profile .section__pic-container {
+    width: clamp(220px, 65vw, 360px);
+    height: auto;
+    margin: 0 auto 12px;
+  }
+
+  .about-pic {
+    width: 100%;
+    height: auto;
+    display: block;
+
+  }
+
+  .about-text {
+    width: 90%;                /* keep text narrower for readability */
+  }
+  .about-text p{ margin: 0; }
+  .about-text p + p{ margin-top: 12px; }
 
   .contact-info-container{
     margin: 0;
@@ -97,12 +151,6 @@
     text-align: center;
   }
 
-  .section__pic-container{
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-
   .section__text__p2{
     font-size: 1.25rem;
   }
@@ -113,6 +161,51 @@
   .text-container{
     text-align: justify;
   }
+
+  #projects .card-text{
+    line-height: 1.2;
+  }
+
+  #projects {
+    height: 100vh;
+    margin: 0;
+  }
+
+  section#projects {
+    margin: 0 2%;              /* override the generic section margin */
+  }
+  /* Make the Swiper container full-width on mobile */
+  #projects .container.swiper {
+    min-height: 0;
+    width: 85%;
+    max-width: none;
+    padding-inline: 8px;       /* small inner padding */
+  }
+
+  /* Remove clamps & big side margins from the Swiper container you use */
+  #projects .card-wrapper {
+    max-width: none;
+    margin: 0;                 /* kill the 60px side margins */
+    padding: 10px 0;           /* slimmer padding so the card looks wider */
+    display: block;            /* avoid flex squeezing width */
+  }
+
+  /* Ensure each slide/card stretches the full line */
+  #projects .swiper-slide { width: 100% !important; }
+  #projects .card-item,
+  #projects .card-link { width: 100%; }
+  #projects .card-list .card-item .card-link {
+    padding: 16px;             /* was 18px */
+  }
+
+  #projects { height: auto; min-height: 0; margin: 0; }
+
+
+
+
+  #contact{
+  }
+
 
 
 
